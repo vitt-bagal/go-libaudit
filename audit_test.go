@@ -154,9 +154,9 @@ func TestListRules(t *testing.T) {
 }
 
 func TestAddRule(t *testing.T) {
-        if sys.GetEndian() != binary.LittleEndian {
-        	t.Skip("testRule is for little endian, but test machine is big endian")
-        }
+	if sys.GetEndian() != binary.LittleEndian {
+		t.Skip("testRule is for little endian, but test machine is big endian")
+	}
 	if os.Geteuid() != 0 {
 		t.Skip("must be root to get audit status")
 	}
@@ -182,10 +182,10 @@ func TestAddRule(t *testing.T) {
 }
 
 func TestAddDuplicateRule(t *testing.T) {
-        if sys.GetEndian() != binary.LittleEndian {
-                t.Skip("testRule is for little endian, but test machine is big endian")
-        }
- 
+	if sys.GetEndian() != binary.LittleEndian {
+		t.Skip("testRule is for little endian, but test machine is big endian")
+	}
+
 	if os.Geteuid() != 0 {
 		t.Skip("must be root to get audit status")
 	}

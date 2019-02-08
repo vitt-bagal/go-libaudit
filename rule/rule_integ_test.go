@@ -51,8 +51,8 @@ type TestCase struct {
 // against known golden data generated on Linux with auditctl.
 func TestBuildGolden(t *testing.T) {
 	if sys.GetEndian() != binary.LittleEndian {
-        	t.Skip("golden test data is for little endian, but test machine is big endian")
-        }
+		t.Skip("golden test data is for little endian, but test machine is big endian")
+	}
 
 	goldenFiles, err := filepath.Glob("testdata/*.rules.golden.yml")
 	if err != nil {

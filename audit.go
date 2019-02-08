@@ -36,8 +36,9 @@ import (
 )
 
 var (
-	 byteOrder = sys.GetEndian()
+	byteOrder = sys.GetEndian()
 )
+
 const (
 	// AuditMessageMaxLength is the maximum length of an audit message (data
 	// portion of a NetlinkMessage).

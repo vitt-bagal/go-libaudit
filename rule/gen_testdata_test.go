@@ -49,9 +49,9 @@ var update = flag.Bool("update", false, "update .golden.yml files")
 // The kernel version and auditctl version used to generate the golden data
 // are stored as comments in the YAML file header.
 func TestUpdateGoldenData(t *testing.T) {
-        if sys.GetEndian() != binary.LittleEndian {
-        	t.Skip("golden test data is for little endian, but test machine is big endian")
-        }
+	if sys.GetEndian() != binary.LittleEndian {
+		t.Skip("golden test data is for little endian, but test machine is big endian")
+	}
 
 	if !*update {
 		t.SkipNow()
